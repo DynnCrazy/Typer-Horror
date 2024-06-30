@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Typer Horror</title>
+    <link rel="icon" type="image/png" href="">
+    <meta property="og:site_name" content="Typer Horror">
+    <meta name="description" content="Typer Horror, berani mencobanya ?">
+    <meta name="robots" content="index, follow">  
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" />    
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet"/>
+    <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
+    <!-- Opt -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="game-container">
+        <div class="centerr">
+        <h1 style="top: 0; margin-top: 40px; position: absolute; text-align: center; font-size: 40px;" id="thettl">TYPER HORROR</h1>
+        <button id="start-button">Start</button>&ensp;&ensp;
+        <button id="setting-button" onclick="openSetting()">Setting</button>
+        </div>
+        <div id="horror-elements" style="display:none;">
+            <div class="centerr">
+            <p id="horror-text">TEXT</p>
+            </div>
+            <p id="timer"></p>
+            <div id="jarakkk">.</div>
+            <img id="horror-image" src="image/h1.jpg" alt="Horror Image">
+        </div>
+        <div id="jarakk">.</div>
+        <div id="game-elements" style="display:none;">
+            <div class="centerr">
+            <input type="text" id="user-input" disabled placeholder="Tunggu...">
+            <br>
+            <button id="send-button" disabled>Kirim</button>
+            </div>
+        </div>
+        <p id="score">Score: 0</p>
+        <div class="centerr">
+            <div class="contset" id="setdiv">
+                <br>
+                <h3>Pilih Mode:</h3>
+                <!--
+                <button class="btn-set" onclick="selectLevel('very-easy')">Very Easy</button>
+                <button class="btn-set" onclick="selectLevel('easy')">Easy</button>
+                <button class="btn-set" onclick="selectLevel('medium')">Medium</button>
+                <button class="btn-set" onclick="selectLevel('hard')">Hard</button>
+                <button class="btn-set" onclick="selectLevel('very-hard')">Very Hard</button>
+                <button class="btn-set" onclick="selectLevel('nightmare')">Nightmare</button>
+                -->
+                <form onsubmit="modeSubmit(event)">
+                    <select name="modegame" id="gamemode">
+                        <option value="very-easy">Very Easy</option>
+                        <option value="easy">Easy</option>
+                        <option value="medium">Medium</option>
+                        <option value="hard">Hard</option>
+                        <option value="very-hard">Very Hard</option>
+                        <option value="nightmare">Nightmare</option>
+                    </select>
+                    <br><br>
+                    <input type="submit" value="Ok" id="btn-set-ok">
+                </form>
+                <button class="btn-set-x" onclick="openSetting()">X</button>
+                <p id="kesulitannya">Kesulitan: Medium (default)</p>
+            </div>
+        </div>
+    </div>
+    <audio src="backsound.mp3" loop id="backsound"></audio>
+    <audio src="end.mp3" id="endsound"></audio>
+    <script src="script.js"></script>
+</body>
+</html>
+
+
